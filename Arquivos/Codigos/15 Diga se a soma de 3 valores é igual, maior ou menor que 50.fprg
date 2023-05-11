@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 12:41:31 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6Mjg6NTQgUE07MjI3Nw=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6NDE6MzEgUE07MTsyMzc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificando se a soma de x, y e z &#233; maior que 50."/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <declare name="z" type="Integer" array="False" size=""/>
+            <declare name="soma" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados ao usu&#225;rio."/>
+            <output expression="&quot;Digite um inteiro para x: &quot;" newline="True"/>
+            <input variable="x"/>
+            <output expression="&quot;Digite um inteiro para y: &quot;" newline="True"/>
+            <input variable="y"/>
+            <output expression="&quot;Digite um inteiro para z: &quot;" newline="True"/>
+            <input variable="z"/>
+            <comment text="Mostrando dados na tela."/>
+            <output expression="&quot;x = &quot; &amp;x &amp;&quot;   y = &quot; &amp;y &amp;&quot;  z = &quot; &amp;z" newline="True"/>
+            <comment text="Soma dos 3 valores."/>
+            <assign variable="soma" expression="x + y + z"/>
+            <comment text="Comparando com 50 (Decis&#227;o)."/>
+            <if expression="soma &gt; 50">
+                <then>
+                    <comment text="Caso a soma seja maior que 50"/>
+                    <output expression="&quot;A soma dos 3 digitos &#233; maior que 50.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="soma &lt; 50">
+                        <then>
+                            <comment text="Caso a soma seja menor que 50"/>
+                            <output expression="&quot;A soma dos 3 digitos &#233; menor que 50.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="Caso as oma seja igual a 50"/>
+                            <output expression="&quot;A soma dos 3 digitos &#233; 50.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-14 05:49:59 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTM7MDU6NTk6MzAgUE07MjI3Mw=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDU6NDk6NTkgUE07MTsyMzky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorA" type="Integer" array="False" size=""/>
+            <declare name="valorB" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero inteiro: &quot;" newline="True"/>
+            <input variable="valorA"/>
+            <output expression="&quot;Digite um segundo n&#250;mero: &quot;" newline="True"/>
+            <input variable="valorB"/>
+            <assign variable="resultado" expression="valorA + valorB"/>
+            <output expression="&quot;A soma dos n&#250;meros &#233;: &quot;&amp; resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

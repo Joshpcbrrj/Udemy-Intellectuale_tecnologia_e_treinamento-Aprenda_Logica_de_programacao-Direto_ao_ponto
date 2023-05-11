@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 05:29:44 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTM7MDU6MDc6MzkgUE07MjI3NQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTM7MDU6Mjk6NDQgUE07MTsyMzgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="100"/>
+            <output expression="&quot;Valor de n = &quot; &amp; n" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

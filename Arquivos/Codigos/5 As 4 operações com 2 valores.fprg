@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-14 06:20:51 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDU6NTE6MDMgUE07MjI2Ng=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDY6MjA6NTEgUE07MTsyMzc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="resultado" type="Integer" array="False" size=""/>
+            <declare name="v1" type="Integer" array="False" size=""/>
+            <declare name="v2" type="Integer" array="False" size=""/>
+            <declare name="resto" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="v1"/>
+            <output expression="&quot;Digite outro n&#250;mero:&quot;" newline="True"/>
+            <input variable="v2"/>
+            <output expression="&quot;Efetuando as 4 opera&#231;&#245;es elementares&quot;" newline="True"/>
+            <assign variable="resultado" expression="v1 + v2"/>
+            <output expression="&quot;A soma de &quot; &amp;v1 &amp;&quot; com &quot; &amp;v2 &amp;&quot; e: &quot; &amp;resultado" newline="True"/>
+            <assign variable="resultado" expression="v1 - v2"/>
+            <output expression="&quot;A subtra&#231;&#227;o de &quot; &amp;v1 &amp;&quot; menos &quot; &amp;v2 &amp;&quot; e: &quot; &amp;resultado" newline="True"/>
+            <assign variable="resultado" expression="v1 * v2"/>
+            <output expression="&quot;A Multiplica&#231;&#227;o de &quot; &amp;v1 &amp;&quot; por &quot; &amp;v2 &amp;&quot; e: &quot; &amp;resultado" newline="True"/>
+            <assign variable="resultado" expression="v1 / v2"/>
+            <assign variable="resto" expression="v1 % v2"/>
+            <output expression="&quot;A visi&#227;o de &quot; &amp;v1 &amp;&quot; por &quot; &amp;v2 &amp;&quot; e: &quot; &amp;resultado &amp; &quot; com resto &quot; &amp;resto" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

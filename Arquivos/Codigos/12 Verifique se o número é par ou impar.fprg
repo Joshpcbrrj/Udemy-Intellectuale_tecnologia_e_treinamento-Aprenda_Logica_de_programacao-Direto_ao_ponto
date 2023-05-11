@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 11:10:36 AM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTE6MDM6MzcgQU07MjI1NQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTE6MTA6MzYgQU07MTsyMzYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verifique se o n&#250;mero digitado  &#233; par ou impar."/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero inteiro: &quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero % 2 == 0">
+                <then>
+                    <output expression="&quot;O n&#250;mero: &quot; &amp;numero &amp;&quot; &#233; par.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O n&#250;mero: &quot; &amp;numero &amp;&quot; &#233; impar.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

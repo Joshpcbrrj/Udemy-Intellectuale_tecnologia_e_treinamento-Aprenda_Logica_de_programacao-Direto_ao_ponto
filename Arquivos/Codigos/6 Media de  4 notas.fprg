@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-14 06:51:34 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDY6NDU6NDUgUE07MjI3Ng=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDY6NTE6MzQgUE07MzsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculando media de 4 notas"/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Real" array="False" size=""/>
+            <declare name="nota4" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a 1&#176; nota:&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176; nota:&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176; nota:&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;Digite a 4&#176; nota:&quot;" newline="True"/>
+            <input variable="nota4"/>
+            <assign variable="media" expression="(nota1 + nota2 + nota3 + nota4) / 4"/>
+            <output expression="&quot;A m&#233;dia das notas &#233;: &quot; &amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

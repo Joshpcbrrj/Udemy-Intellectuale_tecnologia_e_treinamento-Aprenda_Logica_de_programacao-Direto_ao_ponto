@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-16 07:23:07 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTY7MDY6NTE6NTEgUE07MjI3Mg=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTY7MDc6MjM6MDcgUE07MTsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Criando calculo de &#225;rea do tri&#226;ngulo."/>
+            <declare name="base" type="Real" array="False" size=""/>
+            <declare name="altura" type="Real" array="False" size=""/>
+            <declare name="areatri" type="Real" array="False" size=""/>
+            <comment text="Solicitando dados ao usu&#225;rio&#13;&#10;"/>
+            <output expression="&quot;Digite o valor da base do tri&#226;ngulo.&quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;Digite o valor de alturado tri&#226;ngulo.&quot;" newline="True"/>
+            <input variable="altura"/>
+            <comment text="Fazendo formulapara calculo da &#225;rea."/>
+            <assign variable="areatri" expression="(base * altura) / 2"/>
+            <comment text="Exibindo vaor da &#225;rea do tri&#226;ngulo na tela."/>
+            <output expression="&quot;O valor da &#225;rea do tri&#226;ngulo &#233;: &quot; &amp; areatri" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

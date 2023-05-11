@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-14 08:19:11 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDg6MDQ6MzEgUE07MjI2OA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDg6MTk6MTEgUE07MTsyMzgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <declare name="materia" type="String" array="False" size=""/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Integer" array="False" size=""/>
+            <declare name="media" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o nome do aluno:&quot;" newline="True"/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite a mat&#233;ria:&quot;" newline="True"/>
+            <input variable="materia"/>
+            <output expression="&quot;Digite a 1&#176; nota:&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176; nota&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176; nota:&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <assign variable="media" expression="(nota1 + nota2 + nota3)/ 3"/>
+            <output expression="&quot;O nome do aluno &#233;: &quot; &amp;nomeAluno" newline="True"/>
+            <output expression="&quot;A mat&#233;ria &#233;: &quot; &amp;materia" newline="True"/>
+            <output expression="&quot;As notas s&#227;o: 1&#176; &quot; &amp;nota1 &amp;&quot;   2&#176; &quot; &amp;nota2 &amp;&quot;   3&#176; &quot; &amp;nota3" newline="True"/>
+            <output expression="&quot;A m&#233;dia do aluno &#233;: &quot; &amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

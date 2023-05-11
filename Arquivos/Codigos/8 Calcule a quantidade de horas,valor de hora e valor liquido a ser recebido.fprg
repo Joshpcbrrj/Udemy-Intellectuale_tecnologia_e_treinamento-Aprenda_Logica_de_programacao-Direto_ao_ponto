@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-14 09:06:06 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDg6MzA6MDYgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTQ7MDk6MDY6MDYgUE07MTsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calcular o valor do sal&#225;rio liquido de um profissional horista. Considere que s&#227;o aplicados 10%de descontos sobre o valor do sal&#225;rio bruto."/>
+            <declare name="valorHora" type="Real" array="False" size=""/>
+            <declare name="qtdhorastraba" type="Real" array="False" size=""/>
+            <declare name="salarioBruto" type="Real" array="False" size=""/>
+            <declare name="salarioLiquido" type="Real" array="False" size=""/>
+            <declare name="desconto" type="Real" array="False" size=""/>
+            <comment text="Pedindo dados de valor de hora de trabalho e quantidade de  horas trabalhadas."/>
+            <output expression="&quot;Entre com o valor da hora trabalhada:&quot;" newline="True"/>
+            <input variable="valorHora"/>
+            <output expression="&quot;Digite a quantidade de horas trabalhadas:&quot;" newline="True"/>
+            <input variable="qtdhorastraba"/>
+            <comment text="Calculando o sal&#225;rio bruto (Quantidade de horas trabalhadas x valor da hora)"/>
+            <assign variable="salarioBruto" expression="valorHora * qtdhorastraba"/>
+            <comment text="Mostrando o valor de sal&#225;rio bruto na tela."/>
+            <output expression="&quot;O salario bruto &#233;: R$ &quot; &amp;salarioBruto" newline="True"/>
+            <comment text="Calculando o desconto"/>
+            <assign variable="desconto" expression="salarioBruto * 0.10"/>
+            <comment text="Mostrando o valor do desconto em tela."/>
+            <output expression="&quot;O valor do desconto &#233;: R$ &quot; &amp;desconto" newline="True"/>
+            <comment text="Calculando o sal&#225;rio l&#237;quido."/>
+            <assign variable="salarioLiquido" expression="salarioBruto - desconto"/>
+            <comment text="Mostrando salario l&#237;quido em tela."/>
+            <output expression="&quot;O valor l&#237;quido a ser recebido &#233;: R$ &quot; &amp;salarioLiquido" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

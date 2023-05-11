@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 03:56:45 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDI6MzE6MTIgUE07MjI2NA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDM6NTY6NDUgUE07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificando se vc esta no peso atual, abaixo ou acima dele."/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="alt" type="Real" array="False" size=""/>
+            <declare name="peso" type="Real" array="False" size=""/>
+            <declare name="imc" type="Real" array="False" size=""/>
+            <comment text="Solicitando dados ao usu&#225;rio."/>
+            <output expression="&quot;Calculando seu IMC: &quot;" newline="True"/>
+            <output expression="&quot;Digite seu nome: &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Digite sua altura: &quot;" newline="True"/>
+            <input variable="alt"/>
+            <output expression="&quot;Digite seu peso: &quot;" newline="True"/>
+            <input variable="peso"/>
+            <comment text="Calculando IMC."/>
+            <assign variable="imc" expression="peso / (alt * alt)"/>
+            <comment text="Mostrando alguns dados na tela."/>
+            <output expression="&quot;Ola &quot; &amp;nome" newline="True"/>
+            <output expression="&quot;Sua altura &#233;: &quot; &amp;alt" newline="True"/>
+            <output expression="&quot;Seu peso &#233;: &quot; &amp;peso &amp;&quot; Kg&quot;" newline="True"/>
+            <output expression="&quot;Seu &#237;ndice de massa corporal &#233; de: &quot; &amp;imc" newline="True"/>
+            <comment text="Verificando se esta dentro do peso, abaixo ou acima dele(Decis&#227;o)."/>
+            <if expression="imc &lt; 18.5">
+                <then>
+                    <comment text="Decis&#227;o caso o peso esteja abaixo do peso ideal."/>
+                    <output expression="&quot;Voc&#234; esta abaixo do peso ideal.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="imc &gt;= 18.5 &amp;&amp; imc &lt; 25">
+                        <then>
+                            <comment text="Decis&#227;o caso o peso seja normal."/>
+                            <output expression="&quot;Seu peso &#233; ideal.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="imc &gt;= 25 &amp;&amp; imc &lt; 30">
+                                <then>
+                                    <comment text="Decis&#227;o caso o esteja em sobrepeso."/>
+                                    <output expression="&quot;Voc&#234; esta com sobrepeso (Acima do peso ideal).&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="imc &gt;= 30 &amp;&amp; imc &lt; 35">
+                                        <then>
+                                            <comment text="Decis&#227;o em caso de obesidade nivel I"/>
+                                            <output expression="&quot;Voc&#234; esta com obesidade tipo 1.&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="imc &gt;= 35 &amp;&amp; imc &lt; 40">
+                                                <then>
+                                                    <comment text="Decis&#227;o em caso de obesidade nivel II"/>
+                                                    <output expression="&quot;Voc&#234; esta com obesidade tipo 2.&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <comment text="Decis&#227;o em caso de obesidade nivel III"/>
+                                                    <output expression="&quot;Voc&#234; esta com obesidade nivel 3.&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

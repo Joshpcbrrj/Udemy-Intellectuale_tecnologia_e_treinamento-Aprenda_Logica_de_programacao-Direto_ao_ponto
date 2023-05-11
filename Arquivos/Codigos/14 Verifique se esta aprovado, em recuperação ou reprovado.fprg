@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 12:26:09 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTE6MTc6MTcgQU07MjI1OA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6MjY6MDkgUE07MTsyMzgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificando se o aluno esta aprovado, de recupera&#231;&#227;o ou reprovado."/>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <comment text="Solicitando dados do aluno.&#13;&#10;"/>
+            <output expression="&quot;Digite o nome do aluno:&quot;" newline="True"/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite a 1&#176; nota: &quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176; nota: &quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176; nota: &quot;" newline="True"/>
+            <input variable="nota3"/>
+            <comment text="Calculando m&#233;dia das 3 notas."/>
+            <assign variable="media" expression="(nota1 + nota2 + nota3) / 3"/>
+            <comment text="Decis&#227;o (&gt; = 7 aprovado), (&lt; 7 = 4) em recupera&#231;&#227;o), (&lt; = 3 reprovado). "/>
+            <if expression="media &gt;= 7">
+                <then>
+                    <output expression="&quot;Ola &quot; &amp;nomeAluno &amp;&quot;. Voc&#234; esta aprovado. Parab&#233;ns!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="media &lt;= 3">
+                        <then>
+                            <output expression="&quot;Ola &quot; &amp;nomeAluno &amp;&quot;. Infelizmente voc&#234; esta reprovado.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Ola &quot; &amp;nomeAluno &amp;&quot;. Voc&#234; esta em recupera&#231;&#227;o. N&#227;o desista!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Sua m&#233;dia &#233;: &quot; &amp;media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 02:30:30 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDI6MjM6MDAgUE07MjI2Mg=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDI6MzA6MzAgUE07MTsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificando se o n&#250;mero esta no range de 0 a 10."/>
+            <declare name="num" type="Real" array="False" size=""/>
+            <comment text="Solicitando dado ao usu&#225;rio."/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="Mostrando dados na tela."/>
+            <output expression="&quot;O n&#250;mero digitado &#233;: &quot; &amp;num" newline="True"/>
+            <comment text="Verificandose o n&#250;mero esta dentro do range esperado (decis&#227;o)"/>
+            <if expression="num &gt;= 0 &amp;&amp; num &lt;= 10">
+                <then>
+                    <comment text="Decis&#227;o caso o n&#250;mero esteja dentro do range."/>
+                    <output expression="&quot;O n&#250;mero esta dentro do range esperado (De 0 a 10).&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Decis&#227;o caso o n&#250;mero esteja fora do do range."/>
+                    <output expression="&quot;O n&#250;mero esta fora do range esperado (De 0 a 10).&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

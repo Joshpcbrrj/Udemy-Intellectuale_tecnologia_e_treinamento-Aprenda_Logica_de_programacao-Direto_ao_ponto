@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-16 07:44:02 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTY7MDc6MjU6MjAgUE07MjI3MA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTY7MDc6NDQ6MDIgUE07MTsyMzc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Convertendo real para euro"/>
+            <declare name="valorReais" type="Real" array="False" size=""/>
+            <declare name="cotacaoEuro" type="Integer" array="False" size=""/>
+            <declare name="valorEuro" type="Real" array="False" size=""/>
+            <comment text="Solicitando valores ao usu&#225;rio."/>
+            <output expression="&quot;Digite o valor em reais que quer converter para euro: &quot;" newline="True"/>
+            <input variable="valorReais"/>
+            <output expression="&quot;Digite o valor da cota&#231;&#227;o do euro: &quot;" newline="True"/>
+            <input variable="cotacaoEuro"/>
+            <comment text="Formula para converter reais para euro."/>
+            <assign variable="valorEuro" expression="valorReais / cotacaoEuro"/>
+            <comment text="Mostrando os dados na tela."/>
+            <output expression="&quot;1 Eur vale R$ &quot; &amp;cotacaoEuro" newline="True"/>
+            <output expression="&quot;R$ &quot; &amp;valorReais &amp;&quot; Valem Eur &quot; &amp;valorEuro" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 01:56:56 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6NTE6MTkgUE07MjI3NA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDE6NTY6NTYgUE07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verificando as notas e frequencia do aluno."/>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Real" array="False" size=""/>
+            <declare name="media" type="Integer" array="False" size=""/>
+            <declare name="freq" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados ao usu&#225;rio."/>
+            <output expression="&quot;Digiteo nome do aluno: &quot;" newline="True"/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite a 1&#176;nota: &quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176;nota: &quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176;nota: &quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;Digite sua frequencia: &quot;" newline="True"/>
+            <input variable="freq"/>
+            <comment text="Calculando a m&#233;dia"/>
+            <assign variable="media" expression="(nota1 + nota2 + nota3) / 3"/>
+            <comment text="Imprimindo alguns dados na tela"/>
+            <output expression="&quot;Ola &quot; &amp;nomeAluno" newline="True"/>
+            <output expression="&quot;Sua m&#233;dia &#233;: &quot; &amp;media" newline="True"/>
+            <output expression="&quot;Sua frequancia &#233;: &quot; &amp;freq" newline="True"/>
+            <comment text="Verificando se o aluno esta aprovado ou reprovado (Decis&#227;o)"/>
+            <if expression="media &gt;= 7 &amp;&amp; freq &gt;= 75">
+                <then>
+                    <comment text="Decis&#227;o para aluno aprovado."/>
+                    <output expression="&quot;Voc&#234; esta aprovado. Parab&#233;ns!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Decis&#227;o para aluno reprovado."/>
+                    <output expression="&quot;Infelizmente voc&#234; esta reprovado.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

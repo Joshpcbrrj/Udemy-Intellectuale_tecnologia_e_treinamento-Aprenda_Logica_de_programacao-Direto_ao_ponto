@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 02:19:31 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDE6NTk6MjEgUE07MjI3Mw=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MDI6MTk6MzEgUE07MjsyMzgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Algoritimo de monitoramento da temperatura."/>
+            <declare name="temp" type="Real" array="False" size=""/>
+            <comment text="Estabelecendo valor m&#225;ximo."/>
+            <declare name="limiteMax" type="Real" array="False" size=""/>
+            <assign variable="limiteMax" expression="12"/>
+            <comment text="Estabelecendo valor m&#237;nimo"/>
+            <declare name="limiteMin" type="Real" array="False" size=""/>
+            <assign variable="limiteMin" expression="5"/>
+            <comment text="Solicitando dado da temperatura atual ao usu&#225;rio."/>
+            <output expression="&quot;Informe a temperatura atual (n&#250;mero entre 0 e 15): &quot;" newline="True"/>
+            <input variable="temp"/>
+            <output expression="&quot;A temperatura atual &#233;: &quot; &amp;temp &amp;&quot; &#176; celsius&quot;" newline="True"/>
+            <comment text="Verificando se &#233; preciso ou n&#227;o emitir alarme (Decis&#227;o)."/>
+            <if expression="temp &gt; limiteMax || temp &lt; limitemin">
+                <then>
+                    <comment text="Decis&#227;o caso a temperatura esteja muito acima ou muito abaixo do esperado."/>
+                    <output expression="&quot;A temperatura esta fora da  faixa permitida.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Decis&#227;o caso a temperadura esteja menor que m&#225;ximo e maior que m&#237;nimo (dentro do range aceitavel)."/>
+                    <output expression="&quot;A temperatura est&#225; dentro dos padr&#245;es de normalidade. Tudo Ok.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

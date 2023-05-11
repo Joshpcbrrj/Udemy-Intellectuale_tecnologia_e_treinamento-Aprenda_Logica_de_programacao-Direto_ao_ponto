@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-13 05:58:05 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTM7MDU6MzE6MDMgUE07MjI2Mw=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTM7MDU6NTg6MDUgUE07MTsyMzgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Digite o nome do aluno: &quot;" newline="False"/>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite o nome da mat&#233;ria: &quot;" newline="False"/>
+            <declare name="materia" type="String" array="False" size=""/>
+            <input variable="materia"/>
+            <output expression="&quot;Digite a nota do aluno: &quot;" newline="False"/>
+            <declare name="notaAluno" type="Real" array="False" size=""/>
+            <input variable="notaAluno"/>
+            <output expression="&quot;O nome do aluno &#233;: &quot; &amp; nomealuno" newline="True"/>
+            <output expression="&quot;A mat&#233;ria &#233;: &quot; &amp; materia" newline="True"/>
+            <output expression="&quot;A nota do aluno &#233;: &quot; &amp; notaAluno" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

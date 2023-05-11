@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 12:49:38 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6NDM6MDcgUE07MjI3Mg=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTc7MTI6NDk6MzggUE07MTsyMzkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mostrando o maior valor entre a e b"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados ao usu&#225;rio."/>
+            <output expression="&quot;Digite um inteiro para a: &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Digite um inteiro para b: &quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="Mostrando os valores na tela."/>
+            <output expression="&quot;O valor de A &#233;: &quot; &amp;a &amp;&quot;  O valor de B &#233;: &quot; &amp;b" newline="True"/>
+            <comment text="Verificando qual &#233; o maior n&#250;mero (decis&#227;o)."/>
+            <if expression="a &gt; b">
+                <then>
+                    <comment text="Caso A seja maior que B"/>
+                    <output expression="&quot;A &#233; maior que B.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="a &lt; b">
+                        <then>
+                            <comment text="Caso B seja maior que A."/>
+                            <output expression="&quot;B &#233; maior que A.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="Caso os n&#250;meros sejam iguais."/>
+                            <output expression="&quot;Os n&#250;meros s&#227;o iguais.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
