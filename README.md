@@ -22,6 +22,7 @@
 
 ### Estruturas de decisão
 [Estudo de estruturas de decisão](/Conte%C3%BAdo%20do%20curso/3.1%20-%20Estudo%20de%20estrutura%20de%20decis%C3%A3o.md)
+
 [Estudo de operadores lógicos](/Conte%C3%BAdo%20do%20curso/3.2%20-%20Estudo%20de%20operadores%20l%C3%B3gicos.md)
 
 ### Arranjos de dados
