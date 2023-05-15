@@ -13,7 +13,7 @@
 
 ## Conteúdo do curso:
 ### Conceitos básicos e ambiente de trabalho
-[Definições importantes/ Instalando o flowgorithm](/Conte%C3%BAdo%20do%20curso/1.1%20-%20Defini%C3%A7%C3%B5es%20importantes.md)
+[Definições importantes/ Instalando o flowgorithm](/Conte%C3%BAdo%20do%20curso/1.1%20-%20Defini%C3%A7%C3%B5es%20importantes.md) <br>
 [Detalhando ambiente de trabalho/ tipo de dados/ pseudocódigo](/Conte%C3%BAdo%20do%20curso/1.2%20-%20Detalhando%20Ambiente%20de%20trabalho.md)
 
 ### Operações básicas
