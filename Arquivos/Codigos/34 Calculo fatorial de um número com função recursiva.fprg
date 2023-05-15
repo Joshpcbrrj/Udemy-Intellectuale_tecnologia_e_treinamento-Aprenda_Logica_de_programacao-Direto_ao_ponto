@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-27 03:18:37 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjc7MDM6MTg6MzcgUE07NTsyMzkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;O algoritimo ir&#225; retornar o fatorialde um n&#250;mero.&quot;" newline="True"/>
+            <comment text="Vari&#225;veis para armazenar dados"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="guardaFatorial" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados"/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="&quot;Var&#237;&#225;vel &quot;guardaFatorial&quot; recebe o retorno da fun&#231;&#227;o &quot;retornaFatorial&quot;"/>
+            <assign variable="guardaFatorial" expression="retornaFatorial(num)"/>
+            <output expression="&quot;O fatorial de: &quot; &amp;num &amp;&quot; &#233;: &quot; &amp;guardaFatorial" newline="True"/>
+        </body>
+    </function>
+    <function name="retornaFatorial" type="Integer" variable="r">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para armazenar retorno do calculo fatorial"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <if expression="(n == 0) || (n == 1)">
+                <then>
+                    <assign variable="r" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="r" expression="n * retornaFatorial(n - 1)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

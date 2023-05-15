@@ -4,7 +4,7 @@
 > Curso de lógica de programação direto ao ponto usando o **Flowgorithm** da Intellectuale tecnologia - **Prof. Eduardo Casavella** 
 
 ## Certificado
-[Certificado](Certificado\certificado_4_horas.pdf)
+[Certificado](/Certificado/certificado_4_horas.pdf)
 
 ***
 

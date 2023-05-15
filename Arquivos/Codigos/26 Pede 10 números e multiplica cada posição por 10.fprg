@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 05:20:16 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjU7MDQ6NTk6MDIgUE07MjI3NA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjU7MDU6MjA6MTYgUE07MTsyMzc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vari&#225;vel para itera&#231;&#227;o de la&#231;os"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel array de 10 posi&#231;&#245;es"/>
+            <declare name="array10Pos" type="Integer" array="True" size="10"/>
+            <comment text="La&#231;o para solicitar dados e preencher o array"/>
+            <output expression="&quot;Precisamos preencher o array com 10 n&#250;meros.&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Digite o &quot; &amp;i+1 &amp;&quot;&#176; n&#250;mero de 10&quot;" newline="True"/>
+                <input variable="array10Pos[i]"/>
+            </for>
+            <comment text="La&#231;o para mostarr o array completo"/>
+            <output expression="&quot;O array completo ficou: &quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="i + 1 &amp;&quot;&#176; n&#250;mero de 10: &quot; &amp;array10Pos[i]" newline="True"/>
+            </for>
+            <comment text="La&#231;o para multiplicar cada posi&#231;&#227;o do array montado por 10"/>
+            <output expression="&quot;Array com cada posi&#231;&#227;o multiplicada por 10.&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="array10Pos[i]" expression="array10Pos[i] * 10"/>
+                <output expression="i + 1 &amp;&quot;&#176; n&#250;mero de 10: &quot; &amp;array10Pos[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-27 11:38:34 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjc7MTE6Mzg6MzQgUE07MTE7MjQzMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;O algoritmo recebe um n&#250;mero e monta a taboada dessen n&#250;mero. A taboada vai de 1 a 10.&quot;" newline="True"/>
+            <comment text="Vari&#225;vel para armazenar dado"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <comment text="Recebendo dado"/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="Mensagem"/>
+            <output expression="&quot;A taboada do n&#250;mero &quot;&amp;num &amp;&quot;  &#233;:&quot;" newline="True"/>
+            <comment text="Chamando afun&#231;&#227;o &quot;montaTaboada&quot; com &quot;num&quot; como par&#226;metro"/>
+            <call expression="montaTaboada(num)"/>
+        </body>
+    </function>
+    <function name="montaTaboada" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;veis  para guardar valores"/>
+            <declare name="t" type="String" array="True" size="10"/>
+            <declare name="rMult" type="Integer" array="False" size=""/>
+            <comment text="vari&#225;vei iterador do la&#231;o"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="rMult" expression="n * (i + 1)"/>
+                <assign variable="t[i]" expression="n &amp;&quot; x &quot; &amp;(i + 1) &amp;&quot; = &quot; &amp;rMult"/>
+            </for>
+            <comment text="Mostrando taboada na tela"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="t[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

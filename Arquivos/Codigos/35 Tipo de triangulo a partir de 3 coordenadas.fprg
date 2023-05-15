@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-27 04:00:43 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjc7MDQ6MDA6NDMgUE07ODsyMzgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;O algoritmo determina, a partir de 3 n&#250;meros digitados, se &#233; poss&#237;vel formar um tri&#226;ngulo e qual tipo de tri&#226;ngulo ser&#225;.&quot;" newline="True"/>
+            <comment text="Vari&#225;veis para armazenar dados"/>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="num3" type="Integer" array="False" size=""/>
+            <declare name="tipoTri" type="String" array="False" size=""/>
+            <comment text="Solicitando 3 n&#250;meros e armazenando eles"/>
+            <output expression="&quot;Digite o 1&#176; n&#250;mero: &quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Digite o 2&#176; n&#250;mero: &quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Digite o 3&#176; n&#250;mero: &quot;" newline="True"/>
+            <input variable="num3"/>
+            <comment text="Vari&#225;vel &quot;tipoTri&quot; recebe retorno de fun&#231;&#227;o &quot;defineTri&quot; com os 3 n&#250;meros como par&#226;metros"/>
+            <assign variable="tipoTri" expression="defineTri(num1, num2, num3)"/>
+            <comment text="Mostarndo resultado na tela"/>
+            <output expression="tipoTri" newline="True"/>
+        </body>
+    </function>
+    <function name="defineTri" type="String" variable="s">
+        <parameters>
+            <parameter name="n1" type="Integer" array="False"/>
+            <parameter name="n2" type="Integer" array="False"/>
+            <parameter name="n3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para guardar o retorno em forma de &quot;string&quot;"/>
+            <declare name="s" type="String" array="False" size=""/>
+            <comment text="Decis&#227;o para saber se &#233; poss&#237;vel formar um tri&#226;ngulo e qual &#233; o tipo do tri&#226;ngulo formado, caso possa  ser feito."/>
+            <if expression="(n1 &gt; (n2 + n3)) || (n2 &gt; (n1 + n3)) || (n3 &gt; (n2 + n1))">
+                <then>
+                    <assign variable="s" expression="&quot;Desculpe ! Mas com essas 3 coordenadas n&#227;o podemos montar um tri&#226;ngulo.&quot;"/>
+                </then>
+                <else>
+                    <if expression="(n1 == n2) &amp;&amp; (n1 == n3) &amp;&amp; (n2 == n3)">
+                        <then>
+                            <assign variable="s" expression="&quot;Com essas 3 coordenadas pode ser feito um trin&#226;ngulo equil&#225;tero.&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="(n1 == n2) || (n1 == n3) || (n2 == n3)">
+                                <then>
+                                    <assign variable="s" expression="&quot;Com essas 3 coordenadas pode ser feito um trin&#226;ngulo is&#243;sceles.&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="s" expression="&quot;Com essas 3 coordenadas pode ser feito um trin&#226;ngulo escaleno.&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

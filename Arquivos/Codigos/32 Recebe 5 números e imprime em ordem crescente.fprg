@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-27 12:43:28 AM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjc7MTI6NDM6MjggQU07NDsyMzcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;Cria um array com 5 n&#250;meros digitados pelo usu&#225;rio, organiza em ordem crescente e exp&#245;e o array ao final.&quot;" newline="True"/>
+            <comment text="Vari&#225;veis para armazenar dados"/>
+            <declare name="array5" type="Integer" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="La&#231;o para preencher o array"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Digite o &quot; &amp;i + 1 &amp;&quot;&#176; de 5&quot;" newline="True"/>
+                <input variable="array5[i]"/>
+            </for>
+            <comment text="Chamanodo a fun&#231;&#227;o &quot;ordemCrescente&quot; paraorganizar o array5 em ordem crescente"/>
+            <call expression="ordemCrescente(array5)"/>
+            <comment text="Mostrando dados em tela"/>
+            <output expression="&quot;A ordem crescente dos n&#250;meros digitados fica: &quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="array5[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="ordemCrescente" type="None" variable="">
+        <parameters>
+            <parameter name="a5" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;veis de controle"/>
+            <declare name="contA" type="Integer" array="False" size=""/>
+            <declare name="contB" type="Integer" array="False" size=""/>
+            <declare name="trocaV" type="Integer" array="False" size=""/>
+            <comment text="la&#231;o para organizar o array na ordem crescente"/>
+            <for variable="contA" start="0" end="4" direction="inc" step="1">
+                <for variable="contb" start="conta + 1" end="4" direction="inc" step="1">
+                    <if expression="a5[contA] &gt; a5[contB]">
+                        <then>
+                            <assign variable="trocaV" expression="a5[contB]"/>
+                            <assign variable="a5[contB]" expression="a5[contA]"/>
+                            <assign variable="a5[contA]" expression="trocaV"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

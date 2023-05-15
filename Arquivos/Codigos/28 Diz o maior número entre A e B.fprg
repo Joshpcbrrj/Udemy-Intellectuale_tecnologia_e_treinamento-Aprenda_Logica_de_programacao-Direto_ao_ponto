@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-26 03:53:30 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MDM6MDY6MjUgUE07MjI3MQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MDM6NTM6MzAgUE07MTsyMzc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Aviso da funcionalidade do programa"/>
+            <output expression="&quot;Algoritmo para dizer qual o maior n&#250;mero entre A e B.&quot;" newline="True"/>
+            <comment text="Variavel para guardar  o primeiro n&#250;mero"/>
+            <declare name="numA" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados para &quot;numA&quot;"/>
+            <output expression="&quot;Digite o n&#250;mero A: &quot;" newline="True"/>
+            <input variable="numA"/>
+            <comment text="Variavel para guardar  o segundo n&#250;mero n&#250;mero"/>
+            <output expression="&quot;Digite o n&#250;mero B: &quot;" newline="True"/>
+            <declare name="numB" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dados para &quot;numB&quot;"/>
+            <input variable="numB"/>
+            <comment text="Vari&#225;vel para guardar o valor da subfun&#231;&#227;o &quot;verificaMaiorNumero&quot; "/>
+            <declare name="maiorNum" type="Integer" array="False" size=""/>
+            <assign variable="maiorNum" expression="verificaMaiorNumero(numA, numB)"/>
+            <comment text="Mostrando dados na tela"/>
+            <output expression="&quot;Os n&#250;meros comparados s&#227;o: A = &quot;&amp;numA &amp;&quot; e B = &quot; &amp;numB &amp;&quot;. O maior n&#250;mero &#233;: &quot; &amp;maiorNum" newline="True"/>
+        </body>
+    </function>
+    <function name="verificaMaiorNumero" type="Integer" variable="maiorNum">
+        <parameters>
+            <parameter name="nA" type="Integer" array="False"/>
+            <parameter name="nB" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para guardar o maior n&#250;mero"/>
+            <declare name="maiorNum" type="Integer" array="False" size=""/>
+            <comment text="Verificandoqual o maior n&#250;mero entre &quot;nA&quot; e &quot;nB&quot;"/>
+            <if expression="nA &gt; nB">
+                <then>
+                    <assign variable="maiorNum" expression="nA"/>
+                </then>
+                <else>
+                    <assign variable="maiorNum" expression="nB"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

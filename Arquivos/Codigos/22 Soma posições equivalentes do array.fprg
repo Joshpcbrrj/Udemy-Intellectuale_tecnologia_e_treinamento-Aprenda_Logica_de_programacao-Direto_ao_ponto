@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-22 07:20:13 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjI7MDU6NTE6MDggUE07MjI3MA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjI7MDc6MjA6MTMgUE07MTsyMzcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vari&#225;veis vetores &#13;&#10;"/>
+            <declare name="array1" type="Integer" array="True" size="4"/>
+            <declare name="array2" type="Integer" array="True" size="4"/>
+            <declare name="arraySoma" type="Integer" array="True" size="4"/>
+            <comment text="Vari&#225;vel para iterador de la&#231;os"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="La&#231;o para prencher array1"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <output expression="&quot;Array1 ,n&#250;mero &quot; &amp;i+ 1 &amp;&quot; de 4| Digite um n&#250;mero:&quot;" newline="True"/>
+                <input variable="array1[i]"/>
+            </for>
+            <comment text="La&#231;o para prencher array2"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <output expression="&quot;Array2 ,n&#250;mero &quot; &amp;i+ 1 &amp;&quot; de 4| Digite um n&#250;mero:&quot;" newline="True"/>
+                <input variable="array2[i]"/>
+            </for>
+            <comment text="La&#231;o para executar a soma das posi&#231;&#245;es de vetor 1 com vetor 2"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="arraySoma[i]" expression="array1[i] + array2[i]"/>
+                <output expression="array1[i] &amp;&quot; + &quot; &amp;array2[i] &amp;&quot; = &quot; &amp;arraySoma[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-26 11:35:13 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MzU6MTMgUE07MTsyMzc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;Calcular&#225; a m&#233;dia do aluno e dir&#225; o seu conceito dentre (A, B, C, D, E).&quot;" newline="True"/>
+            <comment text="Variav&#233;is para armazenar dados"/>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="conceitoAluno" type="String" array="False" size=""/>
+            <comment text="Solicitando dados do usu&#225;rio"/>
+            <output expression="&quot;Digite o nome do aluno:&quot;" newline="True"/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite a 1&#176; nota: &quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176; nota: &quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176; nota: &quot;" newline="True"/>
+            <input variable="nota3"/>
+            <comment text="Retornando o valor da fun&#231;&#227;o &quot;Calcula m&#233;dia&quot; para vari&#225;vel &quot;m&#233;dia&quot;"/>
+            <assign variable="media" expression="calculaMedia(nota1, nota2, nota3)"/>
+            <comment text="Retornando valor de &quot;defineConceito&quot; para vari&#225;vel &quot;conceitoAluno&quot;"/>
+            <assign variable="conceitoAluno" expression="defineConceito(media)"/>
+            <comment text="Mostrando dados na tela"/>
+            <output expression="&quot;Nome do aluno: &quot; &amp;nomeAluno" newline="True"/>
+            <output expression="&quot;Notas : 1&#176; &quot;&amp;nota1 &amp;&quot;/ 2&#176; &quot; &amp;nota2 &amp;&quot;/ 3&#176; &quot;&amp;nota3" newline="True"/>
+            <output expression="&quot;A m&#233;dia do aluno &#233;: &quot; &amp;media" newline="True"/>
+            <output expression="conceitoAluno" newline="True"/>
+        </body>
+    </function>
+    <function name="calculaMedia" type="Real" variable="m">
+        <parameters>
+            <parameter name="n1" type="Real" array="False"/>
+            <parameter name="n2" type="Real" array="False"/>
+            <parameter name="n3" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <comment text="vari&#225;vel de retornoda m&#233;dia calculada"/>
+            <declare name="m" type="Real" array="False" size=""/>
+            <assign variable="m" expression="(n1 + n2 + n3) /  3"/>
+        </body>
+    </function>
+    <function name="defineConceito" type="String" variable="c">
+        <parameters>
+            <parameter name="mFinal" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para retorno de conceito baseado na m&#233;dia"/>
+            <declare name="c" type="String" array="False" size=""/>
+            <comment text="Decis&#227;o para conceituar &quot;c&quot;"/>
+            <if expression="mFinal &gt;= 9">
+                <then>
+                    <assign variable="c" expression="&quot;Conceito A&quot;"/>
+                </then>
+                <else>
+                    <if expression="mFinal &gt;= 7">
+                        <then>
+                            <assign variable="c" expression="&quot;Conceito B&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="mFinal &gt;= 5">
+                                <then>
+                                    <assign variable="c" expression="&quot;Conceito C&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="mFinal &gt;= 3">
+                                        <then>
+                                            <assign variable="c" expression="&quot;Conceito D&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="c" expression="&quot;Conceito E&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

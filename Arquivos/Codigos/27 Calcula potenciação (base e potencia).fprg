@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 10:42:17 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjU7MDU6MjE6MTEgUE07MjI2NA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjU7MTA6NDI6MTcgUE07MTsyMzc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Variavel para armazenar n&#250;mero digitado pelo usu&#225;rio"/>
+            <declare name="numBase" type="Integer" array="False" size=""/>
+            <comment text="Solicita&#231;&#227;o para que o usu&#225;rio  digite um n&#250;mero e armazenamentodo n&#250;mero digitado em &quot;numBase&quot;"/>
+            <output expression="&quot;Digite um n&#250;mero para a base da potencia&#231;&#227;o:&quot;" newline="True"/>
+            <input variable="numBase"/>
+            <comment text="Vari&#225;vel para armazenar o expoente"/>
+            <declare name="numExp" type="Integer" array="False" size=""/>
+            <comment text="Solicita&#231;&#227;o paraque o usu&#225;rio digite umn&#250;mero para o expoente da potencia&#231;&#227;o e armazenamento em &quot;numExpo&quot;"/>
+            <output expression="&quot;Digite um n&#250;mero para o expoente da potencia&#231;&#227;o:&quot;" newline="True"/>
+            <input variable="numExp"/>
+            <comment text="Vari&#225;vel para armazenar o retorno da fun&#231;&#227;o &quot;calculaPotenciacao&quot; com argumentos &quot;numBase&quot; e &quot;numExp&quot;"/>
+            <declare name="resultado" type="Integer" array="False" size=""/>
+            <assign variable="resultado" expression="calculaPotenciacao(numBase, numExp)"/>
+            <comment text="Mostrando resultado na tela"/>
+            <output expression="&quot;A base &#233;: &quot; &amp;numBase &amp;&quot; / a potencia &#233;: &quot; &amp;numExp &amp;&quot; / O resultado da potencia&#231;&#227;o &#233;: &quot; &amp;resultado" newline="True"/>
+        </body>
+    </function>
+    <function name="calculaPotenciacao" type="Integer" variable="numResult">
+        <parameters>
+            <parameter name="nB" type="Integer" array="False"/>
+            <parameter name="nE" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para iterar la&#231;o"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel para receber multiplas multiplica&#231;&#245;es (Inicializa com valor 1)"/>
+            <declare name="numResult" type="Integer" array="False" size=""/>
+            <assign variable="numResult" expression="1"/>
+            <comment text="La&#231;o para efetuar a potencia&#231;&#227;o"/>
+            <for variable="i" start="0" end="nE -1" direction="inc" step="1">
+                <assign variable="numResult" expression="numResult * nB"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

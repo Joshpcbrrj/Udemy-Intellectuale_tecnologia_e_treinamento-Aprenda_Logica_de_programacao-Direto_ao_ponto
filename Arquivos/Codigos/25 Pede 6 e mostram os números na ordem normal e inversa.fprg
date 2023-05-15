@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 04:57:49 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjI7MTE6Mjk6MTcgUE07MjI3Mg=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjU7MDQ6NTc6NDkgUE07MTsyMzkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vari&#225;vel para iterar os la&#231;os."/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Criando vari&#225;vel vetor de 6 posi&#231;&#245;es"/>
+            <declare name="array6Pos" type="Integer" array="True" size="6"/>
+            <output expression="&quot;Vamos preencher o vetor  com 6 n&#250;meros.&quot;" newline="True"/>
+            <comment text="La&#231;o para solicitar dados e prencher o vetor"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <output expression="&quot;Digite o &quot; &amp;i +  1 &amp;&quot;&#176; de 6&quot;" newline="True"/>
+                <input variable="array6Pos[i]"/>
+            </for>
+            <comment text="La&#231;o para exibir os n&#250;meros como digitados"/>
+            <output expression="&quot;Os 6 n&#250;meros s&#227;o:&quot;" newline="True"/>
+            <for variable="i" start="0" end="5" direction="inc" step="1">
+                <output expression="i + 1 &amp;&quot;&#176; de 6 :&quot; &amp;array6Pos[i]" newline="True"/>
+            </for>
+            <comment text="La&#231;os para imprimir os n&#250;meros em ordem inversa"/>
+            <output expression="&quot;Os n&#250;meros em ordem inversa ficam:&quot;" newline="True"/>
+            <for variable="i" start="5" end="0" direction="dec" step="1">
+                <output expression="i + 1 &amp;&quot;&#176; de 6 :&quot; &amp;array6Pos[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-20 01:12:03 AM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMTk7MDQ6NTQ6NDkgUE07MjI4Mw=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjA7MDE6MTI6MDMgQU07NzsyMzU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vari&#225;vel n&#250;mero de alunos da classe."/>
+            <declare name="numAlunos" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel para iterar os la&#231;os"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Solicitando n&#250;mero de alunos."/>
+            <output expression="&quot;Digite quantos alunos tem na classe: &quot;" newline="True"/>
+            <input variable="numAlunos"/>
+            <comment text="Array para guardar nome de alunos"/>
+            <declare name="arrayNomeAlunos" type="String" array="True" size="numAlunos"/>
+            <comment text="Array para guardar a cada nota separadamente"/>
+            <declare name="arrayNota1" type="Real" array="True" size="numAlunos"/>
+            <declare name="arrayNota2" type="Real" array="True" size="numAlunos"/>
+            <declare name="arrayNota3" type="Real" array="True" size="numAlunos"/>
+            <declare name="arraySituacao" type="String" array="True" size="numAlunos"/>
+            <comment text="Vari&#225;veis para incremento de valores (Todas iniciando em zero)"/>
+            <declare name="somaNotas" type="Real" array="False" size=""/>
+            <assign variable="somaNotas" expression="0"/>
+            <declare name="somaAprov" type="Integer" array="False" size=""/>
+            <assign variable="somaAprov" expression="0"/>
+            <declare name="somaRecu" type="Integer" array="False" size=""/>
+            <assign variable="somaRecu" expression="0"/>
+            <declare name="somaReprov" type="Integer" array="False" size=""/>
+            <assign variable="somaReprov" expression="0"/>
+            <comment text="Vari&#225;vel para calcular a m&#233;dia  de notas do aluno"/>
+            <declare name="mediaNotas" type="Real" array="False" size=""/>
+            <comment text="La&#231;o para preencher arrayNomeAlunos e arrayNota1, arrayNota2, arrayNota3"/>
+            <for variable="i" start="0" end="numAlunos -1" direction="inc" step="1">
+                <comment text="Pedindo e guardando nome do aluno no &quot;arrayNomeAlunos&quot;"/>
+                <output expression="&quot;Digite o nome do &quot; &amp;i + 1 &amp;&quot;&#176; aluno de &quot; &amp;numAlunos" newline="True"/>
+                <input variable="arrayNomeAlunos[i]"/>
+                <comment text="Solicitando e guardando a 1&#176; nota no &quot;arrayNota1&quot;"/>
+                <output expression="&quot;Digite a 1&#176; nota do aluno: &quot;" newline="True"/>
+                <input variable="arrayNota1[i]"/>
+                <comment text="Solicitando e guardando a 2&#176; nota no &quot;arrayNota2&quot;"/>
+                <output expression="&quot;Digite a 2&#176; nota do aluno: &quot;" newline="True"/>
+                <input variable="arrayNota2[i]"/>
+                <comment text="Solicitando e guardando a 3&#176; nota no &quot;arrayNota3&quot;"/>
+                <output expression="&quot;Digite a 3&#176; nota do aluno: &quot;" newline="True"/>
+                <input variable="arrayNota3[i]"/>
+                <comment text="Somando as notas totais na vari&#225;vel &quot;somaNotas&quot;"/>
+                <assign variable="somaNotas" expression="arrayNota1[i] + arraynota2[i] + arrayNota3[i]"/>
+                <comment text="Calculando a m&#233;dia"/>
+                <assign variable="mediaNotas" expression="(arrayNota1[i] + arrayNota2[i] + arrayNota3[i]) / 3"/>
+                <comment text="Verificando se o aluno esta aprovado, em recupera&#231;&#227;o ou reprovado (Decis&#227;o) e somando nos seus respectivos incrementadores "/>
+                <if expression="mediaNotas &gt;= 7">
+                    <then>
+                        <assign variable="arraySituacao[i]" expression="&quot;Aluno aprovado&quot;"/>
+                        <assign variable="somaAprov" expression="somaAprov + 1"/>
+                    </then>
+                    <else>
+                        <if expression="mediaNotas &gt;= 4">
+                            <then>
+                                <assign variable="arraySituacao[i]" expression="&quot;Aluno em recupera&#231;&#227;o&quot;"/>
+                                <assign variable="somaRecu" expression="somaRecu + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="arraySituacao[i]" expression="&quot;Aluno Reprovado&quot;"/>
+                                <assign variable="somaReprov" expression="somaReprov +  1"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <comment text="Vari&#225;vel para guardar m&#233;dia geral de notas da turma"/>
+            <declare name="mediaGeralNotas" type="Real" array="False" size=""/>
+            <comment text="Calculando e guardando a m&#233;dia geral de notas"/>
+            <assign variable="mediaGeralNotas" expression="somaNotas / (numAlunos * 3)"/>
+            <comment text="Mostrando dados na tela"/>
+            <output expression="&quot;Metadados da classe&quot;" newline="True"/>
+            <output expression="&quot;O total de alunos da classe &#233;: &quot; &amp;numAlunos" newline="True"/>
+            <output expression="&quot;A m&#233;dia de notas da turma &#233;: &quot; &amp;mediaGeralNotas" newline="True"/>
+            <output expression="&quot;A quantidade de aprovados &#233;: &quot; &amp;somaAprov" newline="True"/>
+            <output expression="&quot;A quantidade de alunos em recupera&#231;&#227;o &#233;: &quot; &amp;somaRecu" newline="True"/>
+            <output expression="&quot;A quantidade de alunos reprovados &#233;: &quot; &amp;somaReprov" newline="True"/>
+            <comment text="Mostrando dados de alunos com la&#231;o &quot;for&quot;"/>
+            <output expression="&quot;Mostrando dados de alunos&quot;" newline="True"/>
+            <for variable="i" start="0" end="numAlunos - 1" direction="inc" step="1">
+                <comment text="Mostrando nomes"/>
+                <output expression="i + 1 &amp;&quot;&#176; aluno de &quot; &amp;numAlunos" newline="True"/>
+                <output expression="&quot;Nome: &quot; &amp;arrayNomeAlunos[i]" newline="True"/>
+                <comment text="Mostrando nota 1, 2 e 3"/>
+                <output expression="&quot;1&#176; nota: &quot; &amp;arrayNota1[i]" newline="True"/>
+                <output expression="&quot;2&#176; nota: &quot; &amp;arrayNota2[i]" newline="True"/>
+                <output expression="&quot;3&#176; nota: &quot; &amp;arrayNota3[i]" newline="True"/>
+                <comment text="Mostrando situa&#231;&#227;o do aluno (Aprovado/ recupera&#231;&#227;o/ reprovado)"/>
+                <output expression="&quot;A m&#233;dia do aluno &#233;: &quot;&amp;mediaNotas" newline="True"/>
+                <output expression="&quot;Situa&#231;&#227;o do aluno: &quot; &amp;arraySituacao[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

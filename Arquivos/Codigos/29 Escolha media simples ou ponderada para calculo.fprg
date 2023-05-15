@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-26 10:58:25 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MDQ6MTE6MTYgUE07MjI2OA=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTA6NTg6MjUgUE07MjsyMzg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Texto explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;Calcula  m&#233;dia do aluno de 2 formas: Caso digite ( p ) calcular&#225; m&#233;dia ponderada/ caso digite ( m ) calcular&#225; m&#233;dia simples (n&#227;o s&#227;o permitidas outras letras).&quot;" newline="True"/>
+            <comment text="Vari&#225;vels para armazenar dados"/>
+            <declare name="nomeAluno" type="String" array="False" size=""/>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="nota3" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <declare name="letra" type="String" array="False" size=""/>
+            <comment text="Solicitando informa&#231;&#245;es para preencher as vari&#225;veis"/>
+            <output expression="&quot;Digite o nome do aluno: &quot;" newline="True"/>
+            <input variable="nomeAluno"/>
+            <output expression="&quot;Digite a 1&#176; nota do aluno: &quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;Digite a 2&#176; nota do aluno: &quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;Digite a 3&#176; nota do aluno: &quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;Escolha ( m ) para calcularmos a m&#233;dia simples e ( p ) para calcularmos a m&#233;dia ponderada: &quot;" newline="True"/>
+            <input variable="letra"/>
+            <comment text="vari&#225;vel &quot;m&#233;dia&quot; armazena o resultado da fun&#231;&#227;o &quot;escolhaCaso&quot; com argumentos de: &quot;letra&quot;, &quot;nota1&quot;, &quot;nota2&quot;, &quot;nota3&quot;"/>
+            <assign variable="media" expression="escolhaCaso(nota1, nota2, nota3, letra)"/>
+            <comment text="Mostrando dados na tela"/>
+            <output expression="&quot;Nome do aluno: &quot;  &amp;nomeAluno" newline="True"/>
+            <output expression="&quot;Nota 1 = &quot; &amp;nota1" newline="True"/>
+            <output expression="&quot;Nota 2 = &quot; &amp;nota2" newline="True"/>
+            <output expression="&quot;Nota 3 = &quot; &amp;nota3" newline="True"/>
+            <output expression="&quot;A m&#233;dia &#233;: &quot; &amp;media" newline="True"/>
+        </body>
+    </function>
+    <function name="escolhaCaso" type="Real" variable="m">
+        <parameters>
+            <parameter name="n1" type="Real" array="False"/>
+            <parameter name="n2" type="Real" array="False"/>
+            <parameter name="n3" type="Real" array="False"/>
+            <parameter name="c" type="String" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel para armazenar m&#233;dia ao final"/>
+            <declare name="m" type="Real" array="False" size=""/>
+            <comment text="Vari&#225;ve guardar letra"/>
+            <while expression="(c != &quot;p&quot;) &amp;&amp; (c != &quot;m&quot;)">
+                <output expression="&quot;A op&#231;&#227;o digitada &#233; inv&#225;lida ! Digite ( m ) para m&#233;dia aritim&#233;tica ou ( p ) para m&#233;dia ponderada:&quot;" newline="True"/>
+                <input variable="c"/>
+            </while>
+            <if expression="(c == &quot;m&quot;) || (c == &quot;M&quot;)">
+                <then>
+                    <output expression="&quot;A op&#231;&#227;o escolhida &#233; m&#233;dia aritim&#233;tica simples.&quot;" newline="True"/>
+                    <assign variable="m" expression="(n1 + n2 + n3) /3"/>
+                </then>
+                <else>
+                    <output expression="&quot;A op&#231;&#227;o escolhida &#233; m&#233;dia ponderada.&quot;" newline="True"/>
+                    <assign variable="m" expression="((n1 * 4) + (n2 * 6) + (n3 * 8)) /&#13;&#10;(4 + 6 + 8)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

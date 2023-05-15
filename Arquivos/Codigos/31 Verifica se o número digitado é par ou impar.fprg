@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-26 11:54:41 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6NTQ6NDEgUE07MjsyMzgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;Diz se o n&#250;mero digitado pelo usu&#225;rio &#233; par ou impar&quot;" newline="True"/>
+            <comment text="Vari&#225;veis para armazenar dados"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="String" array="False" size=""/>
+            <comment text="Solicitando dado"/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="Retorno da fun&#231;&#227;o &quot;verificaParOuImpar&quot; na vari&#225;vel &quot;resultado&quot;"/>
+            <assign variable="resultado" expression="verificaParOuImpar(num)"/>
+            <comment text="Mostrando dados em tela"/>
+            <output expression="num &amp;&quot; &quot; &amp;resultado" newline="True"/>
+        </body>
+    </function>
+    <function name="verificaParOuImpar" type="String" variable="r">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Vari&#225;vel  string para armazenar retorno da fun&#231;&#227;o"/>
+            <declare name="r" type="String" array="False" size=""/>
+            <comment text="Vari&#225;vel para guardar resto da divis&#227;o"/>
+            <declare name="resto" type="Integer" array="False" size=""/>
+            <assign variable="resto" expression="n % 2"/>
+            <comment text="Decis&#227;o caso o n&#250;mero seja par ou impar"/>
+            <if expression="resto == 0">
+                <then>
+                    <assign variable="r" expression="&quot; &#233; par (0)&quot;"/>
+                </then>
+                <else>
+                    <assign variable="r" expression="&quot; &#233; impar (1)&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-27 10:08:31 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjY7MTE6MTU6MzMgUE07MjI2OQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjc7MTA6MDg6MzEgUE07MTA7MjQyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="output explicando a funcionalidade do algoritmo"/>
+            <output expression="&quot;O algoritmo recebe um n&#250;mero n e faz a soma de 1 at&#233; n.&quot;" newline="True"/>
+            <comment text="Vari&#225;veis para armazenar dados"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="soma1aN" type="Integer" array="False" size=""/>
+            <comment text="Solicitando dado"/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="Vari&#225;vel &quot;soma1aN&quot; recebe retorno da fun&#231;&#227;o &quot;somaDeNumeros&quot;"/>
+            <assign variable="soma1aN" expression="somaDeNumeros(num)"/>
+            <comment text="Mostrando resultado natela"/>
+            <output expression="&quot;O n&#250;mero digitado &#233;: &quot; &amp;num" newline="True"/>
+            <output expression="&quot;A soma ds n&#250;meros de 1 a &quot; &amp;num &amp;&quot; &#233;: &quot; &amp;soma1aN" newline="True"/>
+        </body>
+    </function>
+    <function name="somaDeNumeros" type="Integer" variable="rSoma">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="vari&#225;vel retorno da fun&#231;&#227;o iniciado em &quot;0&quot;"/>
+            <declare name="rSoma" type="Integer" array="False" size=""/>
+            <assign variable="rSoma" expression="0"/>
+            <comment text="Vari&#225;vel para iterar la&#231;o"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="la&#231;o  para realizar a soma de 1 at&#233; &quot;n&quot;"/>
+            <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                <assign variable="rSoma" expression="rSoma + (i + 1)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

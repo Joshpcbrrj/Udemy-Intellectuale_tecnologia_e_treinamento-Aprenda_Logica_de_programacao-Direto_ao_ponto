@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="joshp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-22 11:28:31 PM"/>
+        <attribute name="created" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjI7MTA6MjA6NTIgUE07MjI2MQ=="/>
+        <attribute name="edited" value="am9zaHA7TUlOSVBDOzIwMjItMTAtMjI7MTE6Mjg6MzEgUE07MTsyMzc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Vari&#225;vel vetor de 8 posi&#231;&#245;es"/>
+            <declare name="array8Pos" type="Real" array="True" size="8"/>
+            <comment text=""/>
+            <comment text="Vari&#225;vel para iterar la&#231;o"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Variavies para somar n&#250;meros maiores ou menores que 10."/>
+            <declare name="somaNumMenor10" type="Integer" array="False" size=""/>
+            <assign variable="somaNumMenor10" expression="0"/>
+            <declare name="somaNumMaior10" type="Integer" array="False" size=""/>
+            <assign variable="somaNumMaior10" expression="0"/>
+            <comment text="Vari&#225;vel com o valor 10 para compara&#231;&#245;es. Iniciada com o valor 10"/>
+            <declare name="comp10" type="Integer" array="False" size=""/>
+            <assign variable="comp10" expression="10"/>
+            <comment text="La&#231;o para preencher &quot;array8Pos&quot;"/>
+            <for variable="i" start="0" end="7" direction="inc" step="1">
+                <output expression="&quot;Digite um n&#250;mero para a posi&#231;&#227;o &quot; &amp;i+1 &amp;&quot; de 8 do vetor:&quot;" newline="True"/>
+                <input variable="array8Pos[i]"/>
+                <comment text="Decis&#227;o caso encontre n&#250;mero na posi&#231;&#227;o de &quot;array8Pos&quot; maior que 10"/>
+                <if expression="array8Pos[i] &gt; comp10">
+                    <then>
+                        <assign variable="somaNumMaior10" expression="somaNumMaior10 + 1"/>
+                        <output expression="&quot;Numer&#180;maior que 10.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="somaNumMenor10" expression="somaNumMenor10 + 1"/>
+                        <output expression="&quot;N&#250;mero menor que 10&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <comment text="Mostrando dados na tela"/>
+            <output expression="&quot;No vetor temos &quot; &amp;somaNumMaior10 &amp;&quot; maiores que 10.&quot;" newline="True"/>
+            <output expression="&quot;No vetor temos &quot; &amp;somaNumMenor10 &amp;&quot; menores que 10.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
