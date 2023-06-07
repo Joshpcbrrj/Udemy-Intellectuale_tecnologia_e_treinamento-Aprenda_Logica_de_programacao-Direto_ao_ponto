@@ -1,7 +1,7 @@
 <img src="/Arquivos/img/capa.png" alt="Exemplo de fluxograma" width="500">
 
 # Udemy - Aprenda lógica de programação direto ao ponto (Intellectuale tecnologia e treinamento)
-> Curso de lógica de programação direto ao ponto usando o **Flowgorithm** da Intellectuale tecnologia - **Prof. Eduardo Casavella** 
+> Curso de lógica de programação direto ao ponto usando o **Flowgorithm** da Intellectuale tecnologia - **Prof. Eduardo Casavella** / 4 horas de conteúdo
 
 ## Certificado
 [Certificado](/Certificado/certificado_4_horas.pdf)
